@@ -9,9 +9,14 @@ import { HttpClient } from '@angular/common/http';
 
 export class ListaContatosPage implements OnInit {
   data: any;
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {  }
+
   getDados() {
-    return this.http.get(`https://my-json-server.typicode.com/typicode/demo/profile`);
+   // return this.http.get(`http://www.gt2a.com.br/pos-graduacao/lucas/usuario.json`);
+   return this.http.get(`http://www.gt2a.com.br/pos-graduacao/lucas/lista-professor.json`);
+  }
+  abredetalhe(professor) {
+    console.log('lucas',professor);
   }
   ngOnInit() {
     this.getDados()

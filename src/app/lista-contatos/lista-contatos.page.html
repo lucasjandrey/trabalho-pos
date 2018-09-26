@@ -1,9 +1,12 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>lista-contatos</ion-title>
+    <ion-title>Lista Professores</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content padding>
-
+<ion-content>
+  <ion-item *ngFor="let professor of data?.professores"  href="/lista-contatos-detalhe" (click)="abredetalhe(professor)">
+    <ion-icon name="walk" slot="start"></ion-icon>
+    <ion-label>{{professor.sobrenome}}, {{professor.nome}}</ion-label>
+  </ion-item>
 </ion-content>
