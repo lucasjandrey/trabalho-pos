@@ -7,6 +7,6 @@
 <ion-content>
   <ion-item *ngFor="let professor of data?.professores"  href="/lista-contatos-detalhe" (click)="abredetalhe(professor)">
     <ion-icon name="walk" slot="start"></ion-icon>
-    <ion-label>{{professor.sobrenome}}, {{professor.nome}}</ion-label>
+    <ion-label>{{professor.sobrenome}}, <b>{{professor.nome}}</b></ion-label>
   </ion-item>
 </ion-content>

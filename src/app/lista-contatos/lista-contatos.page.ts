@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { ProfessoresService } from '../service/professores.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-lista-contatos',
@@ -9,20 +11,17 @@ import { HttpClient } from '@angular/common/http';
 
 export class ListaContatosPage implements OnInit {
   data: any;
-  constructor(private http: HttpClient) {  }
+  constructor(private http: HttpClient, private professorService: ProfessoresService, private router : Router)  {  }
 
-  getDados() {
-   // return this.http.get(`http://www.gt2a.com.br/pos-graduacao/lucas/usuario.json`);
-   return this.http.get(`http://www.gt2a.com.br/pos-graduacao/lucas/lista-professor.json`);
-  }
   abredetalhe(professor) {
-    console.log('lucas',professor);
+    this.professorService.professor = professor;
+    this.router.navigate(['/lista-contatos-detalhe']); 
   }
+
   ngOnInit() {
-    this.getDados()
+    this.professorService.getUrl(`http://www.gt2a.com.br/pos-graduacao/lucas/lista-professor.json`)
     .subscribe(data => {
       this.data = data;
-      console.log(data);
     });
   }
 }

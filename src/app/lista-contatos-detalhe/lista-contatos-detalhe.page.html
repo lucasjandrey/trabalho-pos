@@ -7,6 +7,15 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content padding-top>
-    {{professor}}
+
+<ion-content padding>
+    <ion-card>
+      <ion-img [src]="professor.url_foto"></ion-img>
+    <ion-card-header>
+        <ion-card-title>{{professor.nome}} {{professor.sobrenome}}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+        <p>{{professor.info}}</p>
+    </ion-card-content>
+    </ion-card>
 </ion-content>

@@ -7,16 +7,16 @@
         </div>
         <div padding>
           <ion-item>
-            <ion-input type="text" name="usuario" placeholder="Usuário"></ion-input>
+            <ion-input type="text" name="usuario" placeholder="Usuário" [(ngModel)]="usuario"></ion-input>
           </ion-item>
   
           <ion-item>
-            <ion-input type="password" name="senha" placeholder="Senha"></ion-input>
+            <ion-input type="password" name="senha" placeholder="Senha" [(ngModel)]="senha"></ion-input>
           </ion-item>
         </div>
   
         <div padding>
-          <ion-button (click)='teste()' color="dark" size="large" expand="block">
+          <ion-button (click)='validaLogin()' color="dark" size="large" expand="block">
             Login
           </ion-button>
         </div>
