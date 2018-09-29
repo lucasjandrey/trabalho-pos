@@ -11,11 +11,15 @@ import { Router } from '@angular/router';
 
 export class ListaContatosPage implements OnInit {
   data: any;
-  constructor(private http: HttpClient, private professorService: ProfessoresService, private router : Router)  {  }
+  constructor(private http: HttpClient, private professorService: ProfessoresService, private router: Router)  {  }
 
   abredetalhe(professor) {
     this.professorService.professor = professor;
-    this.router.navigate(['/lista-contatos-detalhe']); 
+    this.router.navigate(['/lista-contatos-detalhe']);
+  }
+
+  sair(){
+    this.router.navigate(['/login']);
   }
 
   ngOnInit() {

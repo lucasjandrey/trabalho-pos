@@ -1,0 +1,16 @@
+<ion-header>
+    <ion-toolbar>
+      <ion-buttons slot="start">
+            <ion-back-button></ion-back-button>
+      </ion-buttons>
+      <ion-title>Editar Professores</ion-title>
+    </ion-toolbar>
+
+  </ion-header>
+  
+  <ion-content padding>
+      <ion-input type="text" value={{data.nome}}></ion-input>
+      <ion-input type="text" value={{data.sobrenome}}></ion-input>
+      <ion-button color="primary" (click)="salvar()">Salvar</ion-button>
+  </ion-content>
+  

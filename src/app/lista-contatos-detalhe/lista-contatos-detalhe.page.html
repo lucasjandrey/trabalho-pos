@@ -9,6 +9,8 @@
 
 
 <ion-content padding>
+    <ion-button (click)="editaProfessor()">Editar</ion-button>
+    <lgj-button textoDoBotao="Lucas Editar" (clickRetorno)="editaProfessor()"></lgj-button>
     <ion-card>
       <ion-img [src]="professor.url_foto"></ion-img>
     <ion-card-header>

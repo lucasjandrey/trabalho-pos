@@ -5,12 +5,12 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { IonicModule } from '@ionic/angular';
 
-import { ListaContatosDetalhePage } from './lista-contatos-detalhe.page';
-import { ComponentsModule } from '../componentes/components.module';
+import { ModalPage } from './modal.page';
+
 const routes: Routes = [
   {
     path: '',
-    component: ListaContatosDetalhePage
+    component: ModalPage
   }
 ];
 
@@ -19,9 +19,8 @@ const routes: Routes = [
     CommonModule,
     FormsModule,
     IonicModule,
-    ComponentsModule,
     RouterModule.forChild(routes)
   ],
-  declarations: [ListaContatosDetalhePage]
+  declarations: [ModalPage]
 })
-export class ListaContatosDetalhePageModule {}
+export class ModalPageModule {}

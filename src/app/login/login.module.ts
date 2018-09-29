@@ -5,19 +5,23 @@ import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 
 import { LoginPage } from './login.page';
+import { ModalPage } from '../modal/modal.page';
+import { ComponentsModule } from '../componentes/components.module';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
+    ComponentsModule,
     RouterModule.forChild([
       {
         path: '',
-        component: LoginPage
+        component: LoginPage,
       }
     ])
   ],
-  declarations: [LoginPage]
+  declarations: [LoginPage, ModalPage],
+  entryComponents: [ModalPage]
 })
 export class LoginPageModule {}

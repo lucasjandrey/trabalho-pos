@@ -1,11 +1,17 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>Lista Professores</ion-title>
+    <ion-title>Lista dos Professores</ion-title>
+    <ion-buttons slot="end">
+        <ion-button (click)="sair()">
+          <ion-icon name="log-out" slot="icon-only"></ion-icon>
+        </ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <ion-item *ngFor="let professor of data?.professores"  href="/lista-contatos-detalhe" (click)="abredetalhe(professor)">
+  <ion-searchbar [(ngModel)]="terms"></ion-searchbar>
+  <ion-item *ngFor="let professor of data?.professores " (click)="abredetalhe(professor)">
     <ion-icon name="walk" slot="start"></ion-icon>
     <ion-label>{{professor.sobrenome}}, <b>{{professor.nome}}</b></ion-label>
   </ion-item>

@@ -1,0 +1,16 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>modal</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+    <form>
+        <ion-item>
+          <ion-input type="text"name="login" placeholder="Informe o usuário"></ion-input>
+        </ion-item>
+        <ion-button type="submit">Alterar Senha</ion-button>
+        <ion-button (click)="dismiss()">Fechar</ion-button> 
+        <lgj-button textoDoBotao="Alterar Senha"></lgj-button>
+    </form>
+</ion-content>

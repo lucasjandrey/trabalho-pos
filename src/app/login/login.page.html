@@ -21,9 +21,11 @@
           </ion-button>
         </div>
         <div text-center>
-          <a ion-button color="secondary">Esqueceu sua senha?</a>
+          <ion-icon slot="start" name="flash"></ion-icon>
+          <a ion-button color="secondary" (click)="esqueceuSenha()">Esqueceu sua senha?</a>
         </div>
-      </ion-col>
+        <lgj-button myColor="aqua" textoDoBotao="Lucas Botão" (clickRetorno)="acaoDaPage()"></lgj-button>
+      </ion-col>  
     </ion-row>
   </ion-grid>
 </ion-content>
